@@ -1,6 +1,9 @@
 
 // The ES6 datastructure Map has a signature like this:
-function Map<T1, T2> (a: Array<[T1, T2]>): void {}
+class Map<T1, T2> {
+
+	constructor (a: Array<[T1, T2]>) {}
+}
 
 // It takes an array of 2-element arrays.
 const colors = [
@@ -45,6 +48,7 @@ const numbers = [
 const numberMapFixed1 = new Map(<Array<[string, number]>> numbers);
 
 // FFFFFFFFFFFFFUUUUUUUUUUUUUUUUUUU
+// Look at the type of `numberMapShouldNotCompile`. What will happen when I start using it?
 const numberMapShouldNotCompile = new Map(<Array<[string, string]>> numbers);
 
 // This better not be breakable.
