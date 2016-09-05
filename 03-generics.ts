@@ -2,7 +2,7 @@
 
 function sum (array: Array<number>) { // alternative syntax: number[]
 
-	return array.reduce(0, (soFar, next) => soFar + next);
+	return array.reduce((soFar, next) => soFar + next, 0);
 }
 
 
